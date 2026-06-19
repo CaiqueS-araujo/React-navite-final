@@ -1,27 +1,28 @@
 //Project's Design System
 
+export const theme = {
 //Radius' sizes
-export const radii = {
+radii: {
     xs: 3,
     s: 6,
     m: 10,
     l: 20,
     xl: 40,
     xxl: 60,
-}
+},
 
 //Pattern's sizes
-export const size = {
+size: {
     xs: 10,
     s: 20,
     m: 30,
     l: 45,
     xl: 70,
     xxl: 90,
-}
+},
 
 //Pattern color stystem (light)
-export const LightMode = {
+LightMode: {
     YellowPattern:{
         colors:{
             title: '#FBFAF4',
@@ -52,9 +53,9 @@ export const LightMode = {
             weakBackGround: '#351513',
         }
     },
-}
+},
 
-export const DarkMode = {
+DarkMode: {
     YellowPattern:{
     colors:{
         title: '#FFD866',
@@ -86,3 +87,6 @@ export const DarkMode = {
     }
     },
 }
+}
+
+export type ThemeType = typeof theme;
