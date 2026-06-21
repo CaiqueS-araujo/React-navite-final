@@ -7,7 +7,7 @@ import { theme } from './src/Themes/Theme';
 export default function App() {
   return (
     <ThemeProvider theme={theme}>
-      <StatusBar style="auto" />
+      <StatusBar style="dark" />
       <Home /> 
     </ThemeProvider>
   );

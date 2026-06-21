@@ -3,6 +3,7 @@
     "name": "AppPokemon",
     "slug": "AppPokemon",
     "version": "1.0.0",
+    "scheme": "REACT-NATIVE-FINAL",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",

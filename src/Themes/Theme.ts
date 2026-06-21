@@ -53,6 +53,12 @@ LightMode: {
             weakBackGround: '#351513',
         }
     },
+    Basic:{
+        colors:{
+            white: '#fff',
+            black: '#000',
+        }
+    },
 },
 
 DarkMode: {
@@ -84,6 +90,12 @@ DarkMode: {
         weakText: '#A85A5A',
         strongBackGround: '#3A1212',
         weakBackGround: '#1F0909',
+    }
+    },
+    Basic:{
+    colors:{
+        white: '#fff',
+        black: '#000',
     }
     },
 }
