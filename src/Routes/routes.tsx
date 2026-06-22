@@ -2,9 +2,9 @@ import React, { useContext } from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { LoginContext } from '../Context/LoginProvider';
 
-import Quiz from '../Pages/Quiz';
 import Login from '../Pages/Login';
 import { Home } from '../Pages/Home';
+import { Quiz } from '../Pages/Quiz';
 
 export type RootStackParamList = {
   login: undefined;
