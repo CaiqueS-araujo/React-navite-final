@@ -4,7 +4,7 @@ Aplicativo mobile multiplataforma desenvolvido em **React Native + Expo**, criad
 trabalho em equipe. Reúne várias funcionalidades em torno do universo Pokémon: login,
 Pokédex, quiz, montagem de time, batalha por turnos, jogos e tema claro/escuro.
 
-O projeto consome a [PokeAPI](https://pokeapi.co/) e uma API de autenticação própria que demora 60 segundo para ser executada,
+O projeto consome a [PokeAPI](https://pokeapi.co/) e uma API de autenticação própria que demora 60 segundo para ser iniciada após a primeira requisição, e caso passem 15 minutos, ela volta a ficar ausente, esperando a próxima requisição para ligar novamente.
 seguindo um fluxo de trabalho colaborativo com branches e Pull Requests no GitHub.
 
 ---
