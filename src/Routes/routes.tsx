@@ -1,8 +1,10 @@
-import React, { useContext } from "react";
+import React, { useContext } from 'react';
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import { LoginContext } from '../Context/LoginProvider';
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { LoginContext } from "../Context/LoginProvider";
 import Teams from "../Pages/Teams";
 import Battles from "../Pages/Battles";
+
 
 import Quiz from '../Pages/Quiz';
 import Login from '../Pages/Login';
@@ -20,13 +22,15 @@ export type RootStackParamList = {
   games: undefined;
 };
 
-const Stack = createNativeStackNavigator<RootStackParamList>();
+export type AppNavigation = NativeStackNavigationProp<RootStackParamList>;
+
+export const Stack = createNativeStackNavigator<RootStackParamList>();
 
 export function Routes() {
   const context = useContext(LoginContext);
 
   if (!context) {
-    throw new Error("LoginContext deve ser usado com o LoginProvider");
+    throw new Error('LoginContext deve ser usado com o LoginProvider');
   }
 
   const { loading, isLogged } = context;
@@ -36,11 +40,12 @@ export function Routes() {
   }
 
   return (
-    <Stack.Navigator initialRouteName="login">
+    <Stack.Navigator>
       {isLogged ? (
         <>
           <Stack.Screen name="home" component={Home} />
           <Stack.Screen name="quiz" component={Quiz} />
+
           <Stack.Screen name="pokedex" component={Pokedex} />
           <Stack.Screen name="games" component={Games} />
         </>

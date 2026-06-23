@@ -13,6 +13,7 @@ export type LoginContextType = {
   setUsername: (username: string) => void;
   setPassword: (password: string) => void;
   setLoading: (loading: boolean) => void;
+  setIsLogged: (isLogged: boolean) => void;
 };
 
 export const LoginContext = createContext<LoginContextType | undefined>(undefined);
@@ -50,6 +51,7 @@ export default function LoginProvider({ children }: Props) {
         setUsername,
         setPassword,
         setLoading,
+        setIsLogged,
       }}
     >
       {children}
