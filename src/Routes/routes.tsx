@@ -1,16 +1,19 @@
-import React, { useContext } from 'react';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { LoginContext } from '../Context/LoginProvider';
+import React, { useContext } from "react";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { LoginContext } from "../Context/LoginProvider";
+import Teams from "../Pages/Teams";
+import Battles from "../Pages/Battles";
 
-import Login from '../Pages/Login';
-import { Home } from '../Pages/Home';
-import { Quiz } from '../Pages/Quiz';
+import Quiz from "../Pages/Quiz";
+import Login from "../Pages/Login";
+import { Home } from "../Pages/Home";
 
 export type RootStackParamList = {
   login: undefined;
   home: undefined;
   quiz: undefined;
   team: undefined;
+  battles: undefined;
   pokedex: undefined;
   games: undefined;
 };
@@ -27,19 +30,16 @@ export function Routes() {
   const { loading, isLogged } = context;
 
   if (loading) {
-    return null; 
+    return null;
   }
 
   return (
-    <Stack.Navigator initialRouteName="login">
-      {isLogged ? (
-      <>
-        <Stack.Screen name="quiz" component={Quiz} />
-        <Stack.Screen name="home" component={Home} />
-      </>
-      ) : (
-        <Stack.Screen name="login" component={Login} />
-      )}
+    <Stack.Navigator initialRouteName="team">
+      <Stack.Screen name="team" component={Teams} />
+      <Stack.Screen name="battles" component={Battles} />
+      <Stack.Screen name="quiz" component={Quiz} />
+      <Stack.Screen name="home" component={Home} />
+      <Stack.Screen name="login" component={Login} />
     </Stack.Navigator>
   );
 }
