@@ -44,6 +44,7 @@ export function Routes() {
     <Stack.Navigator>
       {isLogged ? (
         <>
+          <Stack.Screen name="login" component={Login} />
           <Stack.Screen name="home" component={Home} />
           <Stack.Screen name="quiz" component={Quiz} />
           <Stack.Screen name="pokedex" component={Pokedex} />

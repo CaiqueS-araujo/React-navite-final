@@ -17,7 +17,7 @@ export const stylesBotaoR = StyleSheet.create({
   texto: {
     fontSize: 15,
     fontWeight: '500',
-    color: currentTheme.Basic.colors.grey,
+    color: currentTheme.BluePattern.colors.title,
   },
   correta: {
     backgroundColor: '#E3F6E8',
