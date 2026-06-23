@@ -1,18 +1,23 @@
 import React, { useContext } from 'react';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
-
 import { LoginContext } from '../Context/LoginProvider';
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import Teams from "../Pages/Teams";
+import Battles from "../Pages/Battles";
+
 
 import Quiz from '../Pages/Quiz';
 import Login from '../Pages/Login';
 import { Home } from '../Pages/Home';
+import { Pokedex } from '../Pages/Pokedex';
+import { Games } from '../Pages/Games';
 
 export type RootStackParamList = {
   login: undefined;
   home: undefined;
   quiz: undefined;
   team: undefined;
+  battles: undefined;
   pokedex: undefined;
   games: undefined;
 };
@@ -40,6 +45,9 @@ export function Routes() {
         <>
           <Stack.Screen name="home" component={Home} />
           <Stack.Screen name="quiz" component={Quiz} />
+
+          <Stack.Screen name="pokedex" component={Pokedex} />
+          <Stack.Screen name="games" component={Games} />
         </>
       ) : (
         <Stack.Screen name="login" component={Login} />
@@ -47,3 +55,4 @@ export function Routes() {
     </Stack.Navigator>
   );
 }
+
