@@ -1,6 +1,8 @@
-import React, { useContext } from 'react';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { LoginContext } from '../Context/LoginProvider';
+import React, { useContext } from "react";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { LoginContext } from "../Context/LoginProvider";
+import Teams from "../Pages/Teams";
+import Battles from "../Pages/Battles";
 
 import Quiz from '../Pages/Quiz';
 import Login from '../Pages/Login';
@@ -13,6 +15,7 @@ export type RootStackParamList = {
   home: undefined;
   quiz: undefined;
   team: undefined;
+  battles: undefined;
   pokedex: undefined;
   games: undefined;
 };
