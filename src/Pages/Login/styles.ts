@@ -3,7 +3,6 @@ import styled from "styled-components/native"
 
 export const Titles = styled.View(({theme}) => ({
     flex: 0.3,
-    backgroundColor: 'red',
     justifyContent: 'center',
     alignItems: 'center',
 }));

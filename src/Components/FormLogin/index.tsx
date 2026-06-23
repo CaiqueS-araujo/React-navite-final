@@ -4,6 +4,11 @@ import FormLabel from '../FormLabel';
 import { FormInput } from '../FormInput';
 import Error from '../ErrorMessage';
 import PressablePattern from '../Pressable';
+import { useNavigation } from '@react-navigation/native';
+import { AppNavigation } from '../../Routes/routes';
+import { SubmtitLogin } from '../../Data/LoginApi';
+import { Alert } from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
  export type LoginFormData = {
   email:string,
@@ -17,6 +22,27 @@ export  function FormLogin() {
     handleSubmit,
     formState: { errors }
 } = useForm<LoginFormData>();
+
+const nav = useNavigation<AppNavigation>();
+
+
+const  onSubmit = async (data: LoginFormData) => {
+  try{
+    const result = await SubmtitLogin({
+      username: data.email,
+      password: data.password,
+    });
+
+    await AsyncStorage.setItem('tokem', result.token);
+    setIsLogged(true);
+    
+    nav.navigate('home');
+  }
+  catch(error){
+    Alert.alert('Erro!','Credenciais incorretas!');
+    console.log(error);
+  }
+};
 
   return (
     <>
@@ -41,7 +67,7 @@ export  function FormLogin() {
           autoCapitalize='none'/>
         <Error errors={errors}/>
 
-      <PressablePattern message='Enviar'/>       
+      <PressablePattern message='Enviar' onPressFunc={handleSubmit(onSubmit)}/>       
     </>
   )
 }
