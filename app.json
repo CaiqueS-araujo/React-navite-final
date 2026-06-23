@@ -3,7 +3,7 @@
     "name": "AppPokemon",
     "slug": "AppPokemon",
     "version": "1.0.0",
-    "scheme": "react-native-final",
+    "scheme": "apppokemon",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -23,7 +23,7 @@
       },
       "edgeToEdgeEnabled": true,
       "predictiveBackGestureEnabled": false,
-      "package": "com.abranches4434.AppPokemon"
+      "package": "com.abranches4434.apppokemon"
     },
     "web": {
       "favicon": "./assets/favicon.png"
