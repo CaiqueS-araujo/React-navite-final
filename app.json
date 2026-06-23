@@ -3,7 +3,7 @@
     "name": "AppPokemon",
     "slug": "AppPokemon",
     "version": "1.0.0",
-    "scheme": "REACT-NATIVE-FINAL",
+    "scheme": "react-native-final",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -22,13 +22,19 @@
         "backgroundColor": "#ffffff"
       },
       "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "package": "com.abranches4434.AppPokemon"
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
     "plugins": [
       "expo-font"
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "99e61d8c-d4cb-4845-8cf3-e0941ccd16e4"
+      }
+    }
   }
 }
