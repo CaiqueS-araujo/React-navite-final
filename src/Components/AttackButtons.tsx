@@ -85,6 +85,6 @@ const styles = StyleSheet.create({
     borderColor: "rgba(255,255,255,0.08)",
   },
   btnPressed: { opacity: 0.7, transform: [{ translateY: 2 }] },
-  moveName: { fontFamily: FONT_PIXEL, fontSize: 7, textAlign: "center", lineHeight: 13 },
-  power: { fontFamily: FONT_PIXEL, fontSize: 6, color: COLORS.amarelo, marginTop: 3 },
+  moveName: { fontFamily: FONT_PIXEL, fontSize: 13, textAlign: "center", lineHeight: 13 },
+  power: { fontFamily: FONT_PIXEL, fontSize: 11, color: COLORS.amarelo, marginTop: 3 },
 });

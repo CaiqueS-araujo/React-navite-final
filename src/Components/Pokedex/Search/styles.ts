@@ -1,5 +1,7 @@
 import { StyleSheet, Platform } from 'react-native';
-import { theme } from '../../Themes/Theme';
+
+import { theme } from '../../../Themes/Theme';
+
 
 const basicColors = theme.LightMode.Basic.colors;
 

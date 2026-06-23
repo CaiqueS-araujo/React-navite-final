@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 6,
     paddingVertical: 1,
   },
-  tagText: { fontFamily: FONT_PIXEL, color: COLORS.amarelo, fontSize: 6, letterSpacing: 1 },
-  logText: { fontFamily: FONT_PIXEL, fontSize: 9, color: COLORS.azulEscuro, lineHeight: 18 },
-  cursor: { fontFamily: FONT_PIXEL, fontSize: 9, color: COLORS.azulEscuro },
+  tagText: { fontFamily: FONT_PIXEL, color: COLORS.amarelo, fontSize: 11, letterSpacing: 1 },
+  logText: { fontFamily: FONT_PIXEL, fontSize: 16, color: COLORS.azulEscuro, lineHeight: 18 },
+  cursor: { fontFamily: FONT_PIXEL, fontSize: 16, color: COLORS.azulEscuro },
 });

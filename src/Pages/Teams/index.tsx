@@ -8,6 +8,7 @@ import { PokemonLite } from "../../Types/pokemon";
 import { useTeam } from "../../Context/TeamContext";
 import TeamSlots from "../../Components/TeamSlots";
 import PokemonGrid from "../../Components/PokemonGrid";
+import { ThemeToggle } from "../../Components/ThemeToggle";
 import { styles } from "./styles";
 
 export default function Teams() {
@@ -67,6 +68,9 @@ export default function Teams() {
 
   return (
     <View style={styles.root}>
+      <View style={styles.header}>
+        <ThemeToggle />
+      </View>
       <TeamSlots team={team} removeFromTeam={removeFromTeam} />
       <ScrollView keyboardShouldPersistTaps="handled">
         <PokemonGrid

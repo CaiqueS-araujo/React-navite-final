@@ -1,105 +1,60 @@
-import styled from 'styled-components/native';
-import { ImageBackground } from 'react-native';
+import styled from "styled-components/native";
 
-export const MenuContent = styled.View(({theme}) => ({
-    backgroundColor: theme.LightMode.BluePattern.colors.title,
-    justifyContent: 'center',
-    alignItems: 'center',
-    paddingVertical: 8,
-    paddingHorizontal: 20,
-    alignSelf: 'center',
-    borderBottomLeftRadius: 15,
-    borderBottomRightRadius: 15,
+export const Container = styled.View(({ theme }) => ({
+  flex: 1,
+  backgroundColor: theme.LightMode.BluePattern.colors.strongBackGround,
+  paddingHorizontal: 20,
+  paddingTop: 50,
 }));
 
-export const Menu = styled.Text(({ theme }) => ({
-    fontFamily: 'Jersey10_400Regular',
-    fontSize: theme.size.l,
-    color: theme.LightMode.Basic.colors.white,
-    textAlign: 'center',
-    textShadowColor: 'black',
-    textShadowOffset: { width: 2, height: 2 },
-    textShadowRadius: 1,
-}));
-
-// Container dos dois botões
-export const PagesContainer = styled.View({
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginTop: 25,
-    gap: 20,
+export const Header = styled.View({
+  flexDirection: "row",
+  justifyContent: "space-between",
+  alignItems: "center",
 });
 
-export const Page1 = styled(ImageBackground).attrs({
-    source: require('../../../assets/images/backgroundButton.png'),
-})({
-    width: 160,
-    height: 80,
-
-    justifyContent: 'center',
-    alignItems: 'center',
-
-    overflow: 'hidden',
-    borderRadius: 15,
-});
-
-export const TextPage1 = styled.Text(({ theme }) => ({
-    fontFamily: 'Jersey10_400Regular',
-    fontSize: theme.size.l,
-    color: theme.LightMode.Basic.colors.white,
+export const Titulo = styled.Text(({ theme }) => ({
+  fontFamily: "Jersey10_400Regular",
+  fontSize: theme.size.xl,
+  color: theme.LightMode.Basic.colors.white,
+  textShadowColor: theme.LightMode.BluePattern.colors.weakBackGround,
+  textShadowOffset: { width: 3, height: 3 },
+  textShadowRadius: 1,
 }));
 
-
-export const Page2 = styled(ImageBackground).attrs({
-    source: require('../../../assets/images/backgroundButton.png'),
-})({
-    width: 160,
-    height: 80,
-
-    justifyContent: 'center',
-    alignItems: 'center',
-
-    overflow: 'hidden',
-    borderRadius: 15,
-
-});
-
-
-export const TextPage2 = styled.Text(({ theme }) => ({
-    fontFamily: 'Jersey10_400Regular',
-    fontSize: theme.size.l,
-    color: theme.LightMode.Basic.colors.white,
+export const Subtitulo = styled.Text(({ theme }) => ({
+  fontFamily: "Jersey10_400Regular",
+  fontSize: theme.size.m,
+  color: theme.LightMode.Basic.colors.white,
+  marginTop: 2,
+  marginBottom: 26,
 }));
 
-
-export const Page3 = styled(ImageBackground).attrs({
-    source: require('../../../assets/images/backgroundButton.png'),
-})({
-    width: 160,
-    height: 80,
-
-    justifyContent: 'center',
-    alignItems: 'center',
-
-    overflow: 'hidden',
-    borderRadius: 15,
-
+export const Grade = styled.View({
+  flexDirection: "row",
+  flexWrap: "wrap",
+  justifyContent: "space-between",
 });
 
-
-export const TextPage3 = styled.Text(({ theme }) => ({
-    fontFamily: 'Jersey10_400Regular',
-    fontSize: theme.size.l,
-    color: theme.LightMode.Basic.colors.white,
+export const Card = styled.TouchableOpacity(({ theme }) => ({
+  width: "47%",
+  aspectRatio: 1,
+  backgroundColor: theme.LightMode.BluePattern.colors.title,
+  borderRadius: theme.radii.l,
+  justifyContent: "center",
+  alignItems: "center",
+  borderWidth: 3,
+  borderColor: theme.LightMode.Basic.colors.white,
+  marginBottom: 18,
 }));
 
+export const CardIcone = styled.Text({
+  fontSize: 46,
+  marginBottom: 6,
+});
 
-export const Main = styled.View(({theme}) => ({
-    flex: 1,
-    flexDirection: 'row',
-    justifyContent: 'center',
-    gap: 35,
-    flexWrap: 'wrap',
-    marginTop: 90,
+export const CardTitulo = styled.Text(({ theme }) => ({
+  fontFamily: "Jersey10_400Regular",
+  fontSize: theme.size.m,
+  color: theme.LightMode.Basic.colors.white,
 }));

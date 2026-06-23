@@ -6,7 +6,8 @@ import Teams from "../Pages/Teams";
 import Battles from "../Pages/Battles";
 
 
-import Quiz from '../Pages/Quiz';
+
+import {Quiz} from '../Pages/Quiz';
 import Login from '../Pages/Login';
 import { Home } from '../Pages/Home';
 import { Pokedex } from '../Pages/Pokedex';
@@ -45,9 +46,11 @@ export function Routes() {
         <>
           <Stack.Screen name="home" component={Home} />
           <Stack.Screen name="quiz" component={Quiz} />
-
           <Stack.Screen name="pokedex" component={Pokedex} />
           <Stack.Screen name="games" component={Games} />
+          <Stack.Screen name="team" component={Teams} />
+          <Stack.Screen name="battles" component={Battles} />
+
         </>
       ) : (
         <Stack.Screen name="login" component={Login} />

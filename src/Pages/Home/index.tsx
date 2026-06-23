@@ -1,35 +1,47 @@
-import { View, Text } from 'react-native'
-import React from 'react'
-import * as S from './styles'
-import { Jersey10_400Regular, useFonts } from '@expo-google-fonts/jersey-10';
+import React from "react";
+import { useNavigation } from "@react-navigation/native";
+import { Jersey10_400Regular, useFonts } from "@expo-google-fonts/jersey-10";
+import { AppNavigation } from "../../Routes/routes";
+import { ThemeToggle } from "../../Components/ThemeToggle";
+import * as S from "./styles";
 
+// Menu principal: cada card leva para uma seção do app.
+// A lista fica num array só pra ficar fácil de adicionar/remover seções depois.
+const secoes = [
+  { rota: "pokedex", titulo: "Pokédex", icone: "📕" },
+  { rota: "quiz", titulo: "Quiz", icone: "❓" },
+  { rota: "games", titulo: "Games", icone: "🎮" },
+  { rota: "team", titulo: "Meu Time", icone: "🧢" },
+  { rota: "battles", titulo: "Batalha", icone: "⚔️" },
+] as const;
 
 export function Home() {
-const [fontsUsed] = useFonts({Jersey10_400Regular})
+  const navigation = useNavigation<AppNavigation>();
+  const [fontsUsed] = useFonts({ Jersey10_400Regular });
 
-if(!fontsUsed)
-  return 
-
+  if (!fontsUsed) return null;
 
   return (
-    <>
-    <S.MenuContent>
-      <S.Menu>Menu</S.Menu>
-    </S.MenuContent>
-      
-    <S.Main>  
-      <S.Page1>
-        <S.TextPage1>Quiz</S.TextPage1>
-      </S.Page1>
+    <S.Container>
+      <S.Header>
+        <S.Titulo>Pokémon</S.Titulo>
+        <ThemeToggle />
+      </S.Header>
 
-      <S.Page2>
-         <S.TextPage2>Team</S.TextPage2>
-      </S.Page2>
+      <S.Subtitulo>Escolha uma seção, treinador!</S.Subtitulo>
 
-      <S.Page3>
-        <S.TextPage3>Pokédex</S.TextPage3>
-      </S.Page3>
-    </S.Main>
-    </>
-  )
+      <S.Grade>
+        {secoes.map((secao) => (
+          <S.Card
+            key={secao.rota}
+            onPress={() => navigation.navigate(secao.rota)}
+            activeOpacity={0.85}
+          >
+            <S.CardIcone>{secao.icone}</S.CardIcone>
+            <S.CardTitulo>{secao.titulo}</S.CardTitulo>
+          </S.Card>
+        ))}
+      </S.Grade>
+    </S.Container>
+  );
 }

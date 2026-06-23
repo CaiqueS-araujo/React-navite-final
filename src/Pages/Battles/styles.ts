@@ -17,7 +17,7 @@ export const styles = StyleSheet.create({
     paddingVertical: 6,
     borderRadius: 4,
   },
-  darkToggleText: { fontFamily: FONT_PIXEL, fontSize: 7, color: COLORS.amarelo },
+  darkToggleText: { fontFamily: FONT_PIXEL, fontSize: 13, color: COLORS.amarelo },
   content: { padding: 14 },
   empty: {
     flex: 1,
@@ -29,7 +29,7 @@ export const styles = StyleSheet.create({
   },
   emptyText: {
     fontFamily: FONT_PIXEL,
-    fontSize: 9,
+    fontSize: 16,
     color: COLORS.branco,
     textAlign: "center",
     lineHeight: 18,
@@ -43,5 +43,5 @@ export const styles = StyleSheet.create({
     paddingVertical: 12,
     borderRadius: 8,
   },
-  emptyBtnText: { fontFamily: FONT_PIXEL, fontSize: 9, color: COLORS.amareloTexto },
+  emptyBtnText: { fontFamily: FONT_PIXEL, fontSize: 16, color: COLORS.amareloTexto },
 });
