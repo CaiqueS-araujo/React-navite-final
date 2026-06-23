@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontFamily: FONT_PIXEL,
-    fontSize: 7,
+    fontSize: 13,
     color: COLORS.amareloTexto,
     marginBottom: 6,
     letterSpacing: 1,
@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
     borderColor: "rgba(29,44,94,0.3)",
   },
   slotFilled: { borderColor: COLORS.azulEscuro },
-  plus: { fontSize: 18, color: "rgba(29,44,94,0.4)" },
+  plus: { fontSize: 32, color: "rgba(29,44,94,0.4)" },
   sprite: { width: 48, height: 48 },
   removeBtn: {
     position: "absolute",
@@ -102,7 +102,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     borderBottomLeftRadius: 4,
   },
-  removeText: { color: COLORS.branco, fontSize: 8, lineHeight: 10 },
+  removeText: { color: COLORS.branco, fontSize: 14, lineHeight: 10 },
   nameBar: {
     position: "absolute",
     bottom: 0,
@@ -114,7 +114,7 @@ const styles = StyleSheet.create({
   },
   name: {
     fontFamily: FONT_PIXEL,
-    fontSize: 5,
+    fontSize: 9,
     color: COLORS.amarelo,
     textAlign: "center",
     textTransform: "uppercase",

@@ -6,6 +6,8 @@ import { fetchFullStats } from "../../Data/api";
 import { calcDmg, sleep } from "../../Utils/calcDmg";
 import { PokemonBattle, BattleResult } from "../../Types/pokemon";
 import { useTeam } from "../../Context/TeamContext";
+import { useTheme } from "../../Context/ThemeContext";
+import { ThemeToggle } from "../../Components/ThemeToggle";
 import BattleArena, { BattleState } from "../../Components/BattleArena";
 import { styles } from "./styles";
 
@@ -14,7 +16,7 @@ export default function Battles() {
   const { team } = useTeam();
   const [fontsLoaded] = useFonts({ Jersey10_400Regular });
 
-  const [darkMode, setDarkMode] = useState(false);
+  const { isDarkMode } = useTheme();
   const [selectedIdx, setSelectedIdx] = useState<number[]>([]);
   const [enemyTeam, setEnemyTeam] = useState<PokemonBattle[]>([]);
   const [loadingEnemy, setLoadingEnemy] = useState(false);
@@ -159,15 +161,7 @@ export default function Battles() {
   return (
     <View style={styles.root}>
       <View style={styles.topBar}>
-        <Pressable
-          onPress={() => setDarkMode((d) => !d)}
-          style={styles.darkToggle}
-          accessibilityLabel="Alternar modo claro e escuro"
-        >
-          <Text style={styles.darkToggleText}>
-            {darkMode ? "☀ MODO CLARO" : "☾ MODO ESCURO"}
-          </Text>
-        </Pressable>
+        <ThemeToggle />
       </View>
 
       <ScrollView contentContainerStyle={styles.content}>
@@ -185,7 +179,7 @@ export default function Battles() {
           battleStarted={battleStarted}
           onToggleSelect={toggleSelect}
           onStartBattle={startBattle}
-          darkMode={darkMode}
+          darkMode={isDarkMode}
         />
       </ScrollView>
     </View>

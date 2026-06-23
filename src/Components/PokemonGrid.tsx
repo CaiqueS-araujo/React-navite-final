@@ -142,7 +142,7 @@ const styles = StyleSheet.create({
     borderColor: COLORS.azul,
     color: COLORS.branco,
     fontFamily: FONT_PIXEL,
-    fontSize: 8,
+    fontSize: 14,
     paddingHorizontal: 12,
     paddingVertical: 10,
     borderRadius: 6,
@@ -155,7 +155,7 @@ const styles = StyleSheet.create({
     borderRadius: 6,
     justifyContent: "center",
   },
-  searchBtnText: { fontSize: 12 },
+  searchBtnText: { fontSize: 22 },
   clearBtn: {
     backgroundColor: COLORS.vermelhoForte,
     borderWidth: 2,
@@ -164,7 +164,7 @@ const styles = StyleSheet.create({
     borderRadius: 6,
     justifyContent: "center",
   },
-  clearBtnText: { color: COLORS.branco, fontSize: 12 },
+  clearBtnText: { color: COLORS.branco, fontSize: 22 },
   genRow: { gap: 4, marginBottom: 12, paddingBottom: 3 },
   genBtn: {
     backgroundColor: COLORS.azulEscuro,
@@ -175,7 +175,7 @@ const styles = StyleSheet.create({
     borderRadius: 20,
   },
   genBtnActive: { backgroundColor: COLORS.amarelo },
-  genText: { fontFamily: FONT_PIXEL, fontSize: 7, color: COLORS.amareloClaro },
+  genText: { fontFamily: FONT_PIXEL, fontSize: 13, color: COLORS.amareloClaro },
   genTextActive: { color: COLORS.amareloTexto },
   gridBox: {
     backgroundColor: COLORS.azulEscuro,
@@ -185,7 +185,7 @@ const styles = StyleSheet.create({
     borderColor: COLORS.amarelo,
   },
   loading: { alignItems: "center", paddingVertical: 30, gap: 10 },
-  loadingText: { fontFamily: FONT_PIXEL, fontSize: 8, color: COLORS.amareloClaro },
+  loadingText: { fontFamily: FONT_PIXEL, fontSize: 14, color: COLORS.amareloClaro },
   grid: {
     flexDirection: "row",
     flexWrap: "wrap",
@@ -203,7 +203,7 @@ const styles = StyleSheet.create({
   },
   battleBtnText: {
     fontFamily: FONT_PIXEL,
-    fontSize: 10,
+    fontSize: 18,
     color: COLORS.amareloTexto,
     letterSpacing: 1,
   },
