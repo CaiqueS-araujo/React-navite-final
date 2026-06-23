@@ -3,10 +3,9 @@ import { useNavigation } from "@react-navigation/native";
 import { Jersey10_400Regular, useFonts } from "@expo-google-fonts/jersey-10";
 import { AppNavigation } from "../../Routes/routes";
 import { ThemeToggle } from "../../Components/ThemeToggle";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import * as S from "./styles";
 
-// Menu principal: cada card leva para uma seção do app.
-// A lista fica num array só pra ficar fácil de adicionar/remover seções depois.
 const secoes = [
   { rota: "pokedex", titulo: "Pokédex", icone: "📕" },
   { rota: "quiz", titulo: "Quiz", icone: "❓" },
@@ -21,11 +20,31 @@ export function Home() {
 
   if (!fontsUsed) return null;
 
+  const handleLogout = async () => {
+    try {
+      await AsyncStorage.removeItem("token");
+
+      navigation.reset({
+        index: 0,
+        routes: [{ name: "login" as never }],
+      });
+    } catch (err) {
+      console.log("Erro ao fazer logout", err);
+    }
+  };
+
   return (
     <S.Container>
       <S.Header>
         <S.Titulo>Pokémon</S.Titulo>
-        <ThemeToggle />
+
+        <S.HeaderRight>
+          <ThemeToggle />
+
+          <S.LogoutButton onPress={handleLogout}>
+            <S.LogoutText>SAIR</S.LogoutText>
+          </S.LogoutButton>
+        </S.HeaderRight>
       </S.Header>
 
       <S.Subtitulo>Escolha uma seção, treinador!</S.Subtitulo>

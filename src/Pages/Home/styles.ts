@@ -13,6 +13,12 @@ export const Header = styled.View({
   alignItems: "center",
 });
 
+export const HeaderRight = styled.View({
+  flexDirection: "row",
+  alignItems: "center",
+  gap: 10,
+});
+
 export const Titulo = styled.Text(({ theme }) => ({
   fontFamily: "Jersey10_400Regular",
   fontSize: theme.size.xl,
@@ -58,3 +64,18 @@ export const CardTitulo = styled.Text(({ theme }) => ({
   fontSize: theme.size.m,
   color: theme.LightMode.Basic.colors.white,
 }));
+
+export const LogoutButton = styled.TouchableOpacity(({ theme }) => ({
+  backgroundColor: "#ff3b3b",
+  paddingVertical: 6,
+  paddingHorizontal: 12,
+  borderRadius: theme.radii.m,
+  borderWidth: 2,
+  borderColor: theme.LightMode.Basic.colors.white,
+}));
+
+export const LogoutText = styled.Text({
+  fontFamily: "Jersey10_400Regular",
+  color: "white",
+  fontSize: 14,
+});
