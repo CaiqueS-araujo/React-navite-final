@@ -107,7 +107,7 @@ export const stylesLight = StyleSheet.create({
     fontWeight: '600',
     textAlign: 'center',
     marginBottom: 14,
-    color: currentTheme.Basic.colors.grey,
+    color: currentTheme.BluePattern.colors.title,
   },
   opcoes: {
     flexDirection: 'row',
@@ -130,10 +130,10 @@ export const stylesDark = StyleSheet.create({
 
   tela: {
     flex: 1,
-    backgroundColor: currentTheme.Basic.colors.black,
+    backgroundColor: darkTheme.Basic.colors.black,
   },
   header: {
-    backgroundColor: currentTheme.BluePattern.colors.title,
+    backgroundColor: darkTheme.BluePattern.colors.subTitle,
     paddingVertical: 16,
     alignItems: 'center',
     borderBottomWidth: 3,
@@ -142,7 +142,7 @@ export const stylesDark = StyleSheet.create({
   headerTitulo: {
     fontSize: 20,
     fontWeight: '700',
-    color: currentTheme.Basic.colors.white,
+    color: darkTheme.Basic.colors.white,
     letterSpacing: 1,
   },
   containerIntro: {
@@ -169,49 +169,49 @@ export const stylesDark = StyleSheet.create({
   },
   subtitulo: {
     fontSize: 14,
-    color: currentTheme.Basic.colors.grey,
+    color: darkTheme.Basic.colors.white,
     marginBottom: 24,
     textAlign: 'center',
   },
   label: {
     fontSize: 14,
-    color: currentTheme.Basic.colors.white,
+    color: darkTheme.Basic.colors.white,
     marginBottom: 8,
   },
   input: {
     borderWidth: 1,
-    borderColor: currentTheme.YellowPattern.colors.strongText,
+    borderColor: darkTheme.YellowPattern.colors.strongText,
     borderRadius: 10,
     paddingHorizontal: 14,
     paddingVertical: 12,
     fontSize: 15,
     marginBottom: 20,
-    backgroundColor: currentTheme.Basic.colors.white,
+    backgroundColor: darkTheme.Basic.colors.white,
   },
   botaoPrimario: {
-    backgroundColor: currentTheme.RedPattern.colors.title,
+    backgroundColor: darkTheme.RedPattern.colors.title,
     borderRadius: 12,
     paddingVertical: 14,
     alignItems: 'center',
     marginTop: 12,
   },
   botaoDesabilitado: {
-    backgroundColor: currentTheme.BluePattern.colors.subTitle,
+    backgroundColor: darkTheme.BluePattern.colors.title,
   },
   textoBotaoPrimario: {
-    color: currentTheme.Basic.colors.white,
+    color: darkTheme.Basic.colors.white,
     fontSize: 16,
     fontWeight: '600',
   },
   tempo: {
     textAlign: 'center',
     fontSize: 14,
-    color: currentTheme.RedPattern.colors.weakText,
+    color: darkTheme.RedPattern.colors.weakText,
     marginBottom: 8,
   },
   imagemContainer: {
     height: 180,
-    backgroundColor: currentTheme.Basic.colors.white,
+    backgroundColor: darkTheme.Basic.colors.white,
     borderRadius: 16,
     alignItems: 'center',
     justifyContent: 'center',
@@ -227,7 +227,7 @@ export const stylesDark = StyleSheet.create({
     fontWeight: '600',
     textAlign: 'center',
     marginBottom: 14,
-    color: currentTheme.Basic.colors.grey,
+    color: darkTheme.BluePattern.colors.strongText,
   },
   opcoes: {
     flexDirection: 'row',
@@ -236,7 +236,7 @@ export const stylesDark = StyleSheet.create({
   },
   pontuacaoFinal: {
     fontSize: 15,
-    color: currentTheme.Basic.colors.grey,
+    color: darkTheme.Basic.colors.white,
     textAlign: 'center',
     marginBottom: 16,
   },
