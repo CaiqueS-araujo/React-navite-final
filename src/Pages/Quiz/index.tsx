@@ -15,7 +15,7 @@ import perguntasQuiz, { Resposta } from '../../Data/perguntasQuiz';
 import CabecalhoQuiz from '../../Components/Quiz/CabecalhoQuiz';
 import BotaoResposta from '../../Components/Quiz/BotaoResposta';
 import ItemResultado from '../../Components/Quiz/ItemResultado';
-import { styles } from './styles';
+import { stylesLight, stylesDark } from './styles';
 
 const TEMPO_POR_PERGUNTA = 15;
 
@@ -30,6 +30,8 @@ export function Quiz() {
   const [finalizado, setFinalizado] = useState(false);
   const [respostas, setRespostas] = useState<Resposta[]>([]);
   const [imagemCarregando, setImagemCarregando] = useState(true);
+  const [DarkModeIsActive, isDarkModeActive] = useState(false);
+  const [styles, setStyles] = useState(stylesLight);
 
   const perguntaAtual = perguntasQuiz[indiceAtual];
 
@@ -64,6 +66,19 @@ export function Quiz() {
     setNome('');
   }
 
+  function darkModeSwitch() {
+    if (!DarkModeIsActive){
+      isDarkModeActive(true);
+      setStyles(stylesLight);
+      console.log(DarkModeIsActive);
+    }
+    else{
+      isDarkModeActive(false);
+      setStyles(stylesDark);
+      console.log(DarkModeIsActive);
+    }
+  }
+
   useEffect(() => {
     setTempoRestante(TEMPO_POR_PERGUNTA);
     setRespondido(false);
@@ -87,6 +102,14 @@ export function Quiz() {
   if (!iniciou) {
     return (
       <SafeAreaView style={styles.tela}>
+        <TouchableOpacity
+            style={[styles.botaoDesabilitado]}
+            onPress={darkModeSwitch}
+            activeOpacity={0.8}
+          >
+            <Text style={styles.textoBotaoPrimario}>DarkMode</Text>
+          </TouchableOpacity>
+
         <View style={styles.header}>
           <Text style={styles.headerTitulo}>QUIZ POKÉMON</Text>
         </View>

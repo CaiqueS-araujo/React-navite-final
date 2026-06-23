@@ -56,6 +56,7 @@ LightMode: {
     Basic:{
         colors:{
             white: '#fff',
+            grey: '#808080',
             black: '#000',
         }
     },
