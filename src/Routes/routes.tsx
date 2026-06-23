@@ -35,7 +35,7 @@ export function Routes() {
   }
 
   return (
-    <Stack.Navigator initialRouteName="login">
+    <Stack.Navigator>
       {isLogged ? (
         <>
           <Stack.Screen name="home" component={Home} />
