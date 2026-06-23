@@ -4,7 +4,7 @@ import { LoginContext } from "../Context/LoginProvider";
 import Teams from "../Pages/Teams";
 import Battles from "../Pages/Battles";
 
-import Quiz from "../Pages/Quiz";
+import {Quiz} from "../Pages/Quiz";
 import Login from "../Pages/Login";
 import { Home } from "../Pages/Home";
 
