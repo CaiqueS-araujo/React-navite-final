@@ -4,9 +4,11 @@ import { LoginContext } from "../Context/LoginProvider";
 import Teams from "../Pages/Teams";
 import Battles from "../Pages/Battles";
 
-import {Quiz} from "../Pages/Quiz";
-import Login from "../Pages/Login";
-import { Home } from "../Pages/Home";
+import Quiz from '../Pages/Quiz';
+import Login from '../Pages/Login';
+import { Home } from '../Pages/Home';
+import { Pokedex } from '../Pages/Pokedex';
+import { Games } from '../Pages/Games';
 
 export type RootStackParamList = {
   login: undefined;
@@ -34,12 +36,18 @@ export function Routes() {
   }
 
   return (
-    <Stack.Navigator initialRouteName="team">
-      <Stack.Screen name="team" component={Teams} />
-      <Stack.Screen name="battles" component={Battles} />
-      <Stack.Screen name="quiz" component={Quiz} />
-      <Stack.Screen name="home" component={Home} />
-      <Stack.Screen name="login" component={Login} />
+    <Stack.Navigator initialRouteName="login">
+      {isLogged ? (
+        <>
+          <Stack.Screen name="home" component={Home} />
+          <Stack.Screen name="quiz" component={Quiz} />
+          <Stack.Screen name="pokedex" component={Pokedex} />
+          <Stack.Screen name="games" component={Games} />
+        </>
+      ) : (
+        <Stack.Screen name="login" component={Login} />
+      )}
     </Stack.Navigator>
   );
 }
+
